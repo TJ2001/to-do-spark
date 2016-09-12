@@ -1,38 +1,16 @@
-# Compiled source #
-############
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+apply plugin: 'java'
+apply plugin: 'application'
 
-# Packages #
-############
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+archivesBaseName = "to-do"
+version = '1.0'
+mainClassName = "App"
 
-# Logs and databases #
-############
-*.log
+repositories {
+  mavenCentral()
+}
 
-# OS generated files #
-############
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Java and Gradle #
-############
-build/
-.gradle/
+dependencies {
+  compile group: 'com.sparkjava', name: 'spark-core', version: '2.3'
+  testCompile group: 'junit', name: 'junit', version: '4.+'
+  compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+}
